@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block css %}
+<style>
+      .form-group .help-block {
+          display: none;
+      }
+      .form-group.has-error .help-block {
+          display: block;
+      }
+      input[name='decoy'],
+      p.decoy {
+          display: none !important;
+      }
+
+  </style>
+{% endblock %}
+{% block content %}
+{% csrf_token %}
+{{ form.as_p }}
+
+{% endblock %}

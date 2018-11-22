@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<title>About me</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.w3-quarter img{margin-bottom: -6px; cursor: pointer}
+.w3-quarter img:hover{opacity: 0.6; transition: 0.3s}
+</style>
+<body class="w3-content" style="max-width:1300px">
+
+<!-- First Grid: Logo & About -->
+<div class="w3-row">
+  <div class="w3-half w3-black w3-container w3-center" style="height:700px">
+    <div class="w3-padding-64">
+      <h1>หน้าแรก</h1>
+    </div>
+    <div class="w3-padding-64">
+      <a href="#" class="w3-button w3-black w3-block w3-hover-blue-grey w3-padding-16">หน้าแรก</a>
+      <a href="#work" class="w3-button w3-black w3-block w3-hover-teal w3-padding-16">About Me</a>
+      <a href="#work" class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-16">ประวัติย่อ</a>
+      <a href="#contact" class="w3-button w3-black w3-block w3-hover-brown w3-padding-16">Contact</a>
+    </div>
+  </div>
+  <div class="w3-half w3-blue-grey w3-container" style="height:700px">
+    <div class="w3-padding-64 w3-center">
+      <h1>About Me</h1>
+			<a href="https://www.facebook.com/satapon.wongsiri"target="_blank">
+      <img src="{% static "images/satapon.jpg" %}" alt="My image"class="w3-margin w3-circle" alt="Me" style="width:35%"/></a>
+      <div class="w3-left-align w3-padding-large w3-panel w3-pale-blue w3-leftbar w3-rightbar w3-border-blue">
+        <p>สวัสดีครับผม ยินดีต้อนรับ สู่เว็บแนะนำตัวเองของผมนะครับ ผมนายสถาพร วงศ์ศิริ <br>เกิดวันที่ 4 พฤศจิกายน พ.ศ.2542 ตอนนี้อายุ 19 ปีแล้วครับ</p>
+        <p>ตอนนี้กำลังศึกษาอยู่ที่มหาวิทยาลัยนครพนม เป็นนักศึกษาชั้นปีที่ 1 คณะวิทยาการจัดการและเทคโนโลยี สาขา IT ครับผม////เว็บนี้เป็นเพียงเว็บต้นแบบเท่านั้นถ้าผิดพลาดประการใดขออภัยน่ะที่นี้ด้วย</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid: Work & Resume -->
+<div class="w3-row">
+  <div class="w3-half w3-light-grey w3-center" style="min-height:800px" id="work">
+    <div class="w3-padding-64">
+      <h2>gallery</h2>
+			<div class="w3-bar w3-black">
+			  <button class="w3-bar-item w3-button" onclick="openCity('รูปภาพ')">รูปภาพ</button>
+			  <button class="w3-bar-item w3-button" onclick="openCity('กิจกรรม')">กิจกรม</button>
+				  </div>
+				<div id="รูปภาพ" class="w3-container city">
+
+					<div class="w3-row">
+			      <div class="w3-half">
+
+			          <img src="{% static "images/satapon3.jpg" %}"  onclick="onClick(this)" alt="ไปงานแต่งญาติที่หนองบัวลำพู" style="width:100%;height:100%"/>
+            </div>
+			      <div class="w3-half">
+
+			        <img src="{% static "images/m63.jpg" %}"  margin-bottom: "-6px;" onclick="onClick(this)" alt="รูปรวมก่อนจบ ม.6" style="width:113%;height:100%"/>
+			      </div>
+			    </div>
+			    <div class="w3-row w3-hide-small">
+			      <div class="w3-half">
+			        <img src="{% static "images/sea.jpg" %}" margin-bottom: "-6px;" onclick="onClick(this)" alt="ไปเที่ยวทะเลที่ระยอง" style="width:100%;height:80%"/>
+			      </div>
+			      <div class="w3-half">
+			        <img src="{% static "images/glass.jpg" %}"   margin-bottom: "-6px;" onclick="onClick(this)" alt="แว่นตาตัวแรก" style="width:110%;"/>
+			      </div>
+			    </div>
+			    <div class="w3-row w3-hide-small">
+			      <div class="w3-half">
+			      </div>
+			      <div class="w3-half">
+						</div>
+				</div>
+				</div>
+
+				<div id="กิจกรรม" class="w3-container city" style="display:none">
+          <div class="w3-row">
+            <div class="w3-half">
+
+                <img src="{% static "images/Zeer.jpg" %}"  onclick="onClick(this)" alt="แข่งขันหุ่นยนต์ที่ เดอะฮับ Zeer รังสิต" style="width:100%;height:100%"/>
+            </div>
+            <div class="w3-half">
+
+              <img src="{% static "images/m4.jpg" %}"  margin-bottom: "-6px;" onclick="onClick(this)" alt="แข่งที่สุรินทร์" style="width:113%;height:100%"/>
+            </div>
+          </div>
+          <div class="w3-row w3-hide-small">
+            <div class="w3-half">
+              <img src="{% static "images/m42.jpg" %}" margin-bottom: "-6px;" onclick="onClick(this)" alt="แข่งที่สุรินทร์ 2" style="width:100%;height:80%"/>
+            </div>
+            <div class="w3-half">
+              <img src="{% static "images/m6.jpg" %}"   margin-bottom: "-6px;" onclick="onClick(this)" alt="แข่งที่หนองคาย-บึงกาฬ" style="width:110%;"/>
+            </div>
+            <div class="w3-half">
+			      </div>
+			      <div class="w3-half">
+						</div>
+          </div>
+				</div>
+         </div>
+        <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+           <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+           <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+             <img id="img01" class="w3-image">
+             <p id="caption"></p>
+           </div>
+				<script>
+				function openCity(cityName) {
+				    var i;
+				    var x = document.getElementsByClassName("city");
+				    for (i = 0; i < x.length; i++) {
+				       x[i].style.display = "none";
+				    }
+				    document.getElementById(cityName).style.display = "block";
+				}
+				</script>
+
+
+
+  </div>
+	</div>
+  <div class="w3-half w3-indigo w3-container" style="min-height:800px">
+    <div class="w3-padding-64 w3-center">
+      <h2>ประวัติย่อ</h2>
+      <p>Excelsior!!</p>
+      <div class="w3-container w3-responsive">
+        <table class="w3-table">
+          <tr>
+            <th>ปี</th>
+            <th>หัวข้อ</th>
+            <th>ที่ไหน</th>
+          </tr>
+          <tr class="w3-white">
+            <td>2018-ปัจจุบัน</td>
+            <td>เป็นนักศึกษาชั้นปีที่ 1 คณะวิทยาการจัดการและเทคโนโลยี สาขา IT</td>
+            <td>มหาวิทยาลัยนครพนม</td>
+          </tr>
+          <tr>
+            <td>2017-2018</td>
+            <td>เป็นปีที่ได้ลองอะไรใหม่ๆ มากมายปัญหาหลายๆอย่างเข้า และเป็นครั้งแรกที่ได้แชมป์กับเค้าสักที</td>
+            <td>ศูนย์การค้า เดอะฮับ เซียร์รังสิต ปทุมธานี</td>
+          </tr>
+          <tr class="w3-white">
+            <td>2016</td>
+            <td>เริ่มเป็นเด็กนักเรียน ม.ปลายเริ่มได้รับการถ่ายทอดความรู้จากรุ่นพี่</td>
+            <td>โรงเรียนนครพนมวิทยาคม</td>
+          </tr>
+          <tr>
+            <td>2015</td>
+            <td>ได้มาเขียนเกมแข่งเพื่อเรียนรู้ภาษาอื่นๆ ดันไปได้ไกลกว่าแข่งหุ่นยนต์สะงั้น</td>
+            <td>โรงเรียนนวมินทราชินูทิศ สวนกุหลาบวิทยาลัย ปทุมธานี</td>
+          </tr>
+          <tr class="w3-white">
+            <td>2014</td>
+            <td>ไปแข่งการแข่งขันเขียนโปรแกรมหุ่นยนต์ แต่ไปได้แค่ถึงระดับภาค</td>
+            <td>โรงเรียนนครพนมวิทยาคม</td>
+          </tr>
+          <tr class="w3-hide-medium">
+            <td>2013</td>
+            <td>เริ่มเรียนเขียนโปรแกรมครั้งแรก</td>
+            <td>โรงเรียนนครพนมวิทยาคม</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Third Grid: Swing By & Contact -->
+<div class="w3-row" id="contact">
+  <div class="w3-half w3-dark-grey w3-container w3-center" style="height:700px">
+    <div class="w3-padding-64">
+      <h1>จัดทำโดย</h1>
+    </div>
+    <div class="w3-padding-64">
+      <p>นายสถาพร วงศ์ศิริ</p>
+      <p>Thailand</p>
+      <p>0643465741</p>
+      <p>satapon041142@gmail.com</p>
+    </div>
+  </div>
+  {% block content %}
+  {% csrf_token %}
+    {{ form.as_p }}
+    <div class="w3-half w3-teal w3-container" style="height:700px">
+      <div class="w3-padding-64 w3-padding-large">
+        <h1>Contact</h1>
+        <p class="w3-opacity">GET IN TOUCH</p>
+        <form class="w3-container w3-card w3-padding-32 w3-white" action="/action_page.php" target="_blank">
+          <div class="w3-section">
+            <label>Name</label>
+            <input class="w3-input" style="width:100%;" type="text" required name="Name">
+          </div>
+          <div class="w3-section">
+            <label>Email</label>
+            <input class="w3-input" style="width:100%;" type="text" required name="Email">
+          </div>
+          <div class="w3-section">
+            <label>Message</label>
+            <input class="w3-input" style="width:100%;" type="text" required name="Message">
+          </div>
+          <button type="submit" class="w3-button w3-teal w3-right">Send</button>
+        </form>
+      </div>
+    </div>
+  {%endblock content%}
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-black w3-padding-16">
+  <a href="https://www.facebook.com/satapon.wongsiri" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    <a href="https://www.instagram.com/the_p_o_o_m/?hl=th" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+    <i class="fa fa-gmail w3-hover-opacity"></i>
+
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+<script>
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+</script>
+</body>
+</html>
